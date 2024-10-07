@@ -1,0 +1,43 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Current File",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "cwd": "${fileDirname}/..",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}"
+      },
+      "args": [
+        "googletrends-2017/prepared_html/",
+        "-s",
+        "googletrends-2017/50-30-100-split/",
+        "-w",
+        "1000",
+        "-t",
+        "50",
+        "--save",
+        "googletrends_data"
+      ]
+    },
+    {
+      "name": "Debug invoke task: hello",
+      "type": "debugpy",
+      "request": "launch",
+      // https://code.visualstudio.com/docs/python/debugging#_module
+      "module": "invoke",
+      "args": [
+        "hello",
+        "--name",
+        "hoge",
+      ],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
