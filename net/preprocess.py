@@ -51,6 +51,12 @@ def process(doc, tags, words):
     """
     result = []
     for leaf, tag_list, is_content in get_leaves(doc.find_all('html')[0]):
+        # leaf:
+        #   '\n          The Hollywood Reporter\n         '
+        # tag_list:
+        #   ['html', 'body', 'div', 'header', 'div', 'div', 'div', 'h1', 'a', 'span']
+        # is_content:
+        #   0
         leaf_representation = get_leaf_representation(leaf, tag_list, is_content)
         result.append(leaf_representation)
         words_dict, tags_dict, _ = leaf_representation
