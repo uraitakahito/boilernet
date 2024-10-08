@@ -188,6 +188,7 @@ def main():
 
     # files required for tokenization
     nltk.download('punkt')
+    nltk.download('punkt_tab')
 
     filenames = []
     for d in args.DIRS:
