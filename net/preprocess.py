@@ -78,6 +78,21 @@ def parse(filenames):
             result[basename] = process(doc, tags, words)
         except:
             tqdm.write('error processing {}'.format(f))
+
+    # In case of 'googletrends-2017/prepared_html/gt_57.html':
+    #
+    # result:
+    # {'gt_57.html': [
+    #   ({'the': 1, 'hollywood': 1, 'reporter': 1}, {'html': 1, 'body': 1, 'div': 4, 'header': 1, 'h1': 1, 'a': 1, 'span': 1}),
+    #   ({'movies': 1}, {'html': 1, 'body': 1, 'div': 4, 'header': 1, 'nav': 1, 'ul': 1, 'li': 1, 'a': 1, 'span': 1})
+    #   ...
+    # ]}
+    #
+    # tags:
+    # {'html': 113, 'body': 113, 'div': 273, 'header': 25, ...}
+    #
+    # words:
+    # {'the': 36, 'hollywood': 3, ...}
     return result, tags, words
 
 
