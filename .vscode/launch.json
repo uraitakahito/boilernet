@@ -5,12 +5,12 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Python: Current File",
+      "name": "net/preprocess.py",
       "type": "debugpy",
       "request": "launch",
-      "program": "${file}",
+      "program": "${workspaceFolder}/net/preprocess.py",
       "console": "integratedTerminal",
-      "cwd": "${fileDirname}/..",
+      "cwd": "${workspaceFolder}",
       "env": {
         "PYTHONPATH": "${workspaceFolder}"
       },
@@ -25,6 +25,17 @@
         "--save",
         "googletrends_data"
       ]
+    },
+    {
+      "name": "Python: Current File",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "cwd": "${fileDirname}/..",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}"
+      },
     },
     {
       "name": "Debug invoke task: hello",
